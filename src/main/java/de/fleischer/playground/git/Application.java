@@ -16,7 +16,7 @@ public class Application {
         // Create application context
         ApplicationContext applicationContext = SpringApplication.run(Application.class, args);
 
-        System.out.println("Let's inspection teh beans provided by Spring Boot:");
+        System.out.println("Let's inspection the beans provided by Spring Boot:");
 
         // Get initialed beans
         String[] beanNames = applicationContext.getBeanDefinitionNames();
