@@ -38,9 +38,4 @@ public class HelloConrollerTest {
                                                        .andExpect(MockMvcResultMatchers.status().isOk())
                                                        .andExpect(MockMvcResultMatchers.content().string(Matchers.equalTo("Greetings from Spring Boot!")));
     }
-
-    @Test
-    public void testSecondTest() throws Exception {
-        System.out.println("Second test...");
-    }
 }

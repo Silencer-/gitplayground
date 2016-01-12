@@ -14,8 +14,6 @@ import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.web.client.RestTemplate;
 
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by fleischer on 12.01.16.
@@ -41,21 +39,5 @@ public class HelloControllerITTest {
     public void testGetGreeting() throws Exception {
         ResponseEntity<String> responseEntity = restTemplate.getForEntity(base.toString(), String.class);
         Assert.assertThat(responseEntity.getBody(), Matchers.equalTo("Greetings from Spring Boot!"));
-
-        List<String> list = new ArrayList<>();
-        list.add("Name1");
-        list.add("Name1");
-        list.add("Name1");
-        list.add("Name1");
-        list.add("Name1");
-
-        for (String s : list) {
-            System.out.println(s);
-        }
-    }
-
-    @Test
-    public void testNothing() {
-        System.out.println("Nothing to do...");
     }
 }
