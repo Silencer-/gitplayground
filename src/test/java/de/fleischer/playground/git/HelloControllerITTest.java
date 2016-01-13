@@ -39,5 +39,6 @@ public class HelloControllerITTest {
     public void testGetGreeting() throws Exception {
         ResponseEntity<String> responseEntity = restTemplate.getForEntity(base.toString(), String.class);
         Assert.assertThat(responseEntity.getBody(), Matchers.equalTo("Greetings from Spring Boot!"));
+
     }
 }
